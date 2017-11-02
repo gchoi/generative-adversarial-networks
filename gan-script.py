@@ -21,6 +21,9 @@ import datetime
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/")
 
+tf.reset_default_graph()
+tf.get_default_graph()
+
 # Define the discriminator network
 def discriminator(images, reuse_variables=None):
     with tf.variable_scope(tf.get_variable_scope(), reuse=reuse_variables) as scope:
